@@ -1,6 +1,7 @@
 {
   "name": "parking-system",
   "version": "0.1.0",
+  "homepage": "https://kalmigs.github.io/demo-parking-system/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
@@ -21,6 +22,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -44,6 +47,7 @@
     ]
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.181"
+    "@types/lodash": "^4.14.181",
+    "gh-pages": "^3.2.3"
   }
 }
