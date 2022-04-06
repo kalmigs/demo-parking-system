@@ -1,53 +1,9 @@
-import { Button, Dropdown, Menu, message, Popover, Space } from 'antd';
+import { Button, Dropdown, Menu, message } from 'antd';
+import { cloneDeep } from 'lodash';
 import { nanoid } from 'nanoid';
 import React, { useState } from 'react';
-import { cloneDeep } from 'lodash';
-
-type size = 0 | 1 | 2;
-
-interface carData {
-  id: string;
-  size: size;
-  parkedSince?: number;
-  leftSince?: number;
-}
-
-interface spaceData {
-  id: string;
-  size: size;
-  distance: number[];
-  parkedCar?: carData;
-}
-
-const initSpaces: spaceData[] = [
-  {
-    id: nanoid(),
-    size: 0,
-    distance: [2, 4, 5],
-  },
-  {
-    id: nanoid(),
-    size: 1,
-    distance: [3, 2, 3],
-  },
-  {
-    id: nanoid(),
-    size: 2,
-    distance: [1, 3, 5],
-  },
-  {
-    id: nanoid(),
-    size: 1,
-    distance: [4, 5, 6],
-  },
-];
-
-const initCars: carData[] = [
-  {
-    id: nanoid(),
-    size: 1,
-  },
-];
+import { carData, size, spaceData } from './data-types';
+import { initCars, initSpaces } from './initial-data';
 
 function Home() {
   const [spaces, setSpaces] = useState(initSpaces);
