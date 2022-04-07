@@ -27,6 +27,14 @@ export const initSpaces: spaceData[] = [
 export const initCars: carData[] = [
   {
     id: nanoid(),
+    size: 0,
+  },
+  {
+    id: nanoid(),
     size: 1,
+  },
+  {
+    id: nanoid(),
+    size: 2,
   },
 ];
